@@ -20,12 +20,13 @@ configuration: Release
 install:
 - cmd: git submodule update --init --recursive
 before_build:
+- cmd: echo Current Directory:
+- cmd: cd
 - dir
 - cmd: dir Cinecoder.Samples.sln
 - cmd: nuget restore
 build_script:
-- cmd: MSBuild Cinecoder.Samples.sln /p:Configuration=Release /p:Platform=x64
-- cmd: MSBuild Cinecoder.Samples.sln /p:Configuration=Release /p:Platform=ARM64
+- cmd: MSBuild C:\Users\appveyor\projects\cinecoder-samples\Cinecoder.Samples.sln /p:Configuration=Release /p:Platform=x64
 test_script:
 - cmd: nunit3-console _bin\Release.x64\Daniel2.Managed.Tests.dll --result=myresults.xml;format=AppVeyor
 
