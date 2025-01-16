@@ -6,6 +6,9 @@ branches:
   only:
     - master
     
+build:
+  project: Cinecoder.Samples.sln
+  
 environment:
   matrix:
     - APPVEYOR_BUILD_WORKER_IMAGE: Windows
