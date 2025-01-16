@@ -7,7 +7,8 @@ image: Windows
 configuration: Release
     
 install:
-- cmd: git submodule update --init --recursive
+- cmd/dasda git submodule update --init --recursive
+asdasdasdas
 before_build:
 - cmd: echo Current Directory:
 - cmd: cd
