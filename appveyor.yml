@@ -8,7 +8,7 @@ configuration: Release
     
 install:
 - cmd/dasda git submodule update --init --recursive
-asdasdasdas
+
 before_build:
 - cmd: echo Current Directory:
 - cmd: cd
@@ -16,7 +16,7 @@ before_build:
 - cmd: dir Cinecoder.Samples.sln
 - cmd: nuget restore
 build_script:
-#- cmd: MSBuild C:\Users\appveyor\projects\cinecoder-samples\Cinecoder.Samples.sln /p:Configuration=Release /p:Platform=x64
+- cmd: MSBuild C:\Users\appveyor\projects\cinecoder-samples\Cinecoder.Samples.sln /p:Configuration=Release /p:Platform=x64
 - cmd: cd
 test_script:
 - cmd: nunit3-console _bin\Release.x64\Daniel2.Managed.Tests.dll --result=myresults.xml;format=AppVeyor
