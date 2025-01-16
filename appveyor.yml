@@ -2,19 +2,8 @@ version: 0.0.{build}
 pull_requests:
   do_not_increment_build_number: true
   
-branches:
-  only:
-    - master
-    
-build:
-  project: Cinecoder.Samples.sln
+image: Windows
   
-environment:
-  matrix:
-    - APPVEYOR_BUILD_WORKER_IMAGE: Windows33
-      platform: x64
-      job_name: Build on Windows x64
-    
 configuration: Release
     
 install:
@@ -26,7 +15,8 @@ before_build:
 - cmd: dir Cinecoder.Samples.sln
 - cmd: nuget restore
 build_script:
-- cmd: MSBuild C:\Users\appveyor\projects\cinecoder-samples\Cinecoder.Samples.sln /p:Configuration=Release /p:Platform=x64
+#- cmd: MSBuild C:\Users\appveyor\projects\cinecoder-samples\Cinecoder.Samples.sln /p:Configuration=Release /p:Platform=x64
+- cmd: cd
 test_script:
 - cmd: nunit3-console _bin\Release.x64\Daniel2.Managed.Tests.dll --result=myresults.xml;format=AppVeyor
 
