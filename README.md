@@ -6,11 +6,11 @@ Projects demonstrating how to use Cinecoder to encode and decode, including the 
 
 We auto-build this using AppVeyor - here is how we are doing right now:
 
-[![Build status](https://ci.appveyor.com/api/projects/status/cbhe9hx8mne2yuej?svg=true)](https://ci.appveyor.com/project/cinegy/cinecoder-samples)
+[![Build status](https://ci.appveyor.com/api/projects/status/cbhe9hx8mne2yuej?svg=true)](http://localhost/project/AppVeyor/cinecoder-samples)
 
 You can check out the latest compiled binary from our branches here:
 
-[AppVeyor Cinecoder.Samples Project Builder](https://ci.appveyor.com/project/cinegy/cinecoder-samples)
+[AppVeyor Cinecoder.Samples Project Builder](http://localhost/project/AppVeyor/cinecoder-samples)
 
 ## Project Overview
 
