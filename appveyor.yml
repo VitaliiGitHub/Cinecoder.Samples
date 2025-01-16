@@ -11,7 +11,7 @@ build:
   
 environment:
   matrix:
-    - APPVEYOR_BUILD_WORKER_IMAGE: Windows
+    - APPVEYOR_BUILD_WORKER_IMAGE: Windows33
       platform: x64
       job_name: Build on Windows x64
     
